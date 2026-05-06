@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RiseForWealth</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>RiseForWealth 💸</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#content">Content</a>
+      <a href="#join">Join</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Discipline = Freedom</h2>
+    <p>Build your mindset. Build your wealth. Escape average life.</p>
+    <button onclick="joinNow()">Start Your Journey</button>
+  </section>
+
+  <section id="about" class="reveal">
+    <h2>About</h2>
+    <p>This page is for those who want to level up. Money mindset, discipline, success habits.</p>
+  </section>
+
+  <section id="content" class="reveal">
+    <h2>Content</h2>
+    <div class="cards">
+      <div class="card">💡 Money Mindset</div>
+      <div class="card">🔥 Discipline</div>
+      <div class="card">🚀 Success Habits</div>
+    </div>
+    <div class="money-container">
+  <div class="money">$</div>
+  <div class="money">$</div>
+  <div class="money">$</div>
+  <div class="money">$</div>
+</div>
+  </section>
+
+  <section id="join" class="reveal">
+    <h2>Join the Movement</h2>
+    <p>Follow @RiseForWealth and start your grind today.</p>
+    <button><a href="https://www.tiktok.com/@riseforwealth01?_r=1&_t=ZS-967E5RJCqIs" target="_blank">Follow Now</a></button>
+  </section>
+
+  <footer>
+    <p>© 2026 RiseForWealth | Stay Focused 🔥</p>
+  </footer>
+
+  <script>
+    function joinNow() {
+      alert("Stay consistent. Your future depends on it 💯");
+    }
+
+    function revealOnScroll() {
+      const reveals = document.querySelectorAll(".reveal");
+
+      reveals.forEach((el) => {
+        const windowHeight = window.innerHeight;
+        const elementTop = el.getBoundingClientRect().top;
+        const revealPoint = 100;
+
+        if (elementTop < windowHeight - revealPoint) {
+          el.classList.add("active");
+        }
+      });
+    }
+
+    window.addEventListener("scroll", revealOnScroll);
+  </script>
+
+</body>
+</html>
