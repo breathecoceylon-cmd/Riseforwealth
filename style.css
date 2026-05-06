@@ -34,11 +34,48 @@ nav a:hover {
 .hero {
   text-align: center;
   padding: 120px 20px;
-  background: linear-gradient(to right, #000, #111);
+  background: linear-gradient(to right, rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('https://images.unsplash.com/photo-1522199710521-72d69614c702?auto=format&fit=crop&w=1200&q=80');
+  background-size: cover;
+  background-position: center;
 }
 
 .hero h2 {
   font-size: 42px;
+}
+
+.gallery-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.gallery-card {
+  background: #111;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 260px;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.gallery-card:hover {
+  transform: translateY(-6px);
+}
+
+.gallery-card img {
+  width: 100%;
+  display: block;
+  height: 180px;
+  object-fit: cover;
+}
+
+.gallery-card p {
+  padding: 16px;
+  margin: 0;
+  font-size: 16px;
+  color: #f5f5f5;
 }
 
 button {
